@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 html, body {
@@ -9,6 +9,6 @@ html, body {
 /* 交互信息显示 */
 .mark-info {
     width: 100%;
-    min-height: 1em;
+    min-height: 3em;
     text-align: center;
 }

@@ -28,6 +28,7 @@ function doCurlPostReq($url, array $post_data) {
 
 /**
  * 通过使用curl模块提供，模拟get方式进行跳转
+ * !方法有问题 不要使用
  * @param string $url 跳转至url
  * @param mixed $data get方式携带的参数值对
  * @return mixed $response 执行get请求后，获得的回复

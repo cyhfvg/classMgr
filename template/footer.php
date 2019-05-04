@@ -1,10 +1,7 @@
 <?php
 $html_footer = <<<EOF
 
-
-</div>
-
-<div class="jumbotron text-center" style="margin-bottom:0">
+<div class="text-center" style="position:fixed;bottom:0;background-color:#F8F8FF;width:100%;">
 <p>常熟理工学院</p>
 </div>
 

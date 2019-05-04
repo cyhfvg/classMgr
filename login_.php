@@ -13,7 +13,7 @@ $user_name = $_POST["user_name"];
 $user_password = $_POST["password"];
 
 //获取mysql连接
-$conn = getMysql_connection();
+$conn = getMysqlConnection();
 $sql = "select * from User where user_name='$user_name' and user_password='$user_password';";
 
 $result = query_sql($conn, $sql);
@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
     //用户不存在 等交互
     $url = get_pre_url()."/login.php";
     $post_data = array(
-        "login_info"=>"用户不存在，或密码错误，请自行检查!"
+        "login_info"=>"用户不存在，或密码错误，请重新登录!"
     );
     $result = do_form_req($url, $post_data);
     echo $result;
