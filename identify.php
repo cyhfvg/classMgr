@@ -6,7 +6,7 @@
 session_start();
 require_once(dirname(__FILE__)."/util/util_url.php");
 require_once(dirname(__FILE__)."/util/util_curl.php");
-if (!isset($_SESSION['user_name'])) {
+if (!isset($_SESSION['stu_id']) || !isset($_SESSION["stu_name"])) {
     $url = get_pre_url()."/login.php";
     $post_data = array(
         "login_info"=>"无权访问请求页面，请登录!!!"

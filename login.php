@@ -23,9 +23,9 @@ require(dirname(__FILE__).'/template/header.php');
             <form class="form-group" action='login_.php' method='post'>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text">用户名</span>
+                        <span class="input-group-text">学号</span>
                     </div>
-                    <input type='text' class="form-control" name='user_name'>
+                    <input type='text' class="form-control" name='stu_id'>
                 </div>
                 
                 <div class="input-group mb-3">

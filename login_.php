@@ -9,12 +9,12 @@ require_once(dirname(__FILE__)."/util/util_curl.php");
 require_once(dirname(__FILE__)."/util/util_mysqli.php");
 require_once(dirname(__FILE__)."/util/util_url.php");
 
-$user_name = $_POST["user_name"];
-$user_password = $_POST["password"];
+$stu_id = $_POST["stu_id"];
+$stu_password = $_POST["password"];
 
 //获取mysql连接
 $conn = getMysqlConnection();
-$sql = "select * from User where user_name='$user_name' and user_password='$user_password';";
+$sql = "select * from tb_stu where stu_id='$stu_id' and stu_password='$stu_password';";
 
 $result = query_sql($conn, $sql);
 if ($result->num_rows > 0) {
@@ -26,7 +26,8 @@ if ($result->num_rows > 0) {
     //开启session功能
     session_start();
     //登录成功创建session身份
-    $_SESSION["user_name"] = $row["user_name"];
+    $_SESSION["stu_id"] = $row["stu_id"];
+    $_SESSION["stu_name"] = $row["stu_name"];
 
     $url = get_pre_url()."/home.php";
 

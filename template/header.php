@@ -25,7 +25,6 @@ $html_header = <<<EOF
     <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
-    <script src="https://use.fontawesome.com/452826394c.js"></script>
 </head>
 <body>
 EOF;
