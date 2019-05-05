@@ -12,11 +12,11 @@ require_once(dirname(__FILE__).'/util/util_url.php');
             <form action="stu_password_edit_.php" method="POST">
                 <div class="form-group">
                 <label for="origin_password">原密码</label>
-                <input type="text" name="stu_password" id="origin_password" class="form-control" placeholder="">
+                <input type="password" name="stu_password" id="origin_password" class="form-control" placeholder="">
                 </div>
                 <div class="form-group">
                 <label for="new_password">新密码</label>
-                <input type="text" name="new_password" id="new_password" class="form-control" placeholder="">
+                <input type="password" name="new_password" id="new_password" class="form-control" placeholder="">
                 </div>
                 <button type="submit" class="btn btn-primary">提交</button>
             </form>

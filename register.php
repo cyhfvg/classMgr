@@ -37,7 +37,7 @@ require(dirname(__FILE__).'/template/header.php');
                     <div class="input-group-prepend">
                         <span class="input-group-text">密码</span>
                     </div>
-                    <input type="text" class="form-control" name="stu_password" require="true">
+                    <input type="password" class="form-control" name="stu_password" require="true">
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
