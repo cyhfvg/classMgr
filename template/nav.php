@@ -26,5 +26,8 @@
                 <a class="dropdown-item" href="file_view.php">文件列表</a>
             </div>
         </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link" href="logout.php">注销</a>
+        </li>
     </ul>
 </nav>
