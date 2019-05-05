@@ -1,4 +1,6 @@
 <?php
+include("identify.php");
+
 /**
  * 此页面用来提供用户登录，逻辑判断功能
  * 接收login页面提交的数据，

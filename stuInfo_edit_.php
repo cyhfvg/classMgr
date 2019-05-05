@@ -1,4 +1,5 @@
 <?php
+include("identify.php");
 require_once(dirname(__FILE__).'/util/util_url.php');
 require_once(dirname(__FILE__).'/util/util_curl.php');
 require_once(dirname(__FILE__).'/util/util_mysqli.php');

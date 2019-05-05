@@ -1,5 +1,7 @@
 <?php
+include("identify.php");
 require(dirname(__FILE__).'/template/header.php');
+require_once(dirname(__FILE__).'/template/nav.php');
 ?>
 <div class='container'>
     <div class='row' style="margin-top:15%">

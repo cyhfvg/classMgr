@@ -12,4 +12,5 @@ if ($_FILES['file']['error'] > 0) {
         }
         move_uploaded_file($_FILES['file']['tmp_name'],'upload/'."$stu_id/".$_FILES['file']['name']);
 }
+header("location:file_view.php");
 ?>
