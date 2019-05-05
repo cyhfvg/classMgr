@@ -13,10 +13,10 @@ require_once(dirname(__FILE__).'/util/util_url.php');
 $stu_id = $_SESSION['stu_id'];
 $dir = dirname(__FILE__)."/upload"."/$stu_id";
 if (file_exists($dir)) {
-    $url = get_pre_url();
     if($dh = opendir($dir)) {
         while (($file = readdir($dh)) !== false) {
             if($file != "." && $file != "..") {
+                $url = get_pre_url();
                 $url = $url."/upload"."/$stu_id"."/$file";
                 echo "
                 <tr>
