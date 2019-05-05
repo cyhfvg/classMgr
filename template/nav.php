@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-sm bg-light navbar-light">
-    <ul class="nav nav-tabs" role="tablist">
+    <ul class="nav nav-tabs">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">学生服务</a>
             <div class="dropdown-menu">
@@ -9,22 +9,21 @@
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">班级服务</a>
-            <div class="dropdown-menu">
-                    <a class="dropdown-item active" href="classInfo_view.php">班级概览</a>
-                    <a class="dropdown-item" href="classInfo_edit.php">班级信息修改</a>
-                    <a class="dropdown-item" href="class_Aty_view.php">班级活动概览</a>
-                    <a class="dropdown-item" href="aty_create.php">创建班级活动</a>
-                    <a class="dropdown-item" href="aty_delete.php">班级活动删除</a>
-            </div>
+            <a class="nav-link" href="class_aty_view.php?class_aty_cur_page=0">班级活动概览</a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">活动服务</a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="atyInfo_view.php">活动明细</a>
-                <a class="dropdown-item" href="all_aty_view.php">活动概览</a>
+                <a class="dropdown-item" href="all_aty_view.php?aty_cur_page=0">活动概览</a>
                 <a class="dropdown-item" href="aty_create.php">活动创建</a>
                 <a class="dropdown-item" href="aty_delete.php">活动删除</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">文件管理</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="file_upload.php">文件上传</a>
+                <a class="dropdown-item" href="file_view.php">文件列表</a>
             </div>
         </li>
     </ul>
