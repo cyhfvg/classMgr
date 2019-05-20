@@ -23,7 +23,7 @@ require_once(dirname(__FILE__).'/template/nav.php');
                         <input type="submit" class="btn btn-primary" value="提交">
                     </div>
                     <div class="col">
-                        <a type="button" href='register.php' class="btn btn-link">注册</a>
+                        <a type="button" href='all_aty_view.php?aty_cur_page=0' class="btn btn-link">取消</a>
                     </div>
                 </div>
             </form>

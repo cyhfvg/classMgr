@@ -8,9 +8,9 @@ $aty_id = $_POST['aty_id'];
 $conn = getMysqlConnection();
 $sql = "delete from tb_aty where aty_id='$aty_id';"; 
 $result = query_sql($conn, $sql);
-$url = get_pre_url().'/class_aty_view.php';
+$url = get_pre_url().'/all_aty_view.php';
 $get_data = array(
-    "class_aty_cur_page"=>"0"
+    "aty_cur_page"=>"0"
 );
 echo do_form_req($url, $get_data,'GET');
 ?>

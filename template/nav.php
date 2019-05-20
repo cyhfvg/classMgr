@@ -1,16 +1,49 @@
+<?php
+// TODO: root 与 普通用户区分
+// session_start();
+$class_create_output = "";
+
+$user_flag = ($_SESSION['stu_id'] == 'root');
+
+if ($_SESSION['stu_id'] == 'root') {
+    $class_create_output = "
+            <li class='nav-item dropdown'>
+                <a class='nav-link' href='class_aty_view.php?class_aty_cur_page=0'>创建班级</a>
+            </li>
+    ";
+}
+
+?>
 <nav class="navbar navbar-expand-sm bg-light navbar-light">
     <ul class="nav nav-tabs">
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">学生服务</a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="stuInfo_view.php?stu_cur_page=0">学生信息展示</a>
-                <a class="dropdown-item" href="stu_password_edit.php">修改密码</a>
-                <a class="dropdown-item" href="stuInfo_edit.php">学生信息修改</a>
-            </div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link" href="class_aty_view.php?class_aty_cur_page=0">班级活动概览</a>
-        </li>
+        <?php
+        // * 如果是普通用户显示 学生服务模块
+        if (!$user_flag) {
+            echo "
+                <li class='nav-item dropdown'>
+                    <a class='nav-link dropdown-toggle' data-toggle='dropdown' href='#'>学生服务</a>
+                    <div class='dropdown-menu'>
+                        <a class='dropdown-item' href='stuInfo_view.php?stu_cur_page=0'>学生信息展示</a>
+                        <a class='dropdown-item' href='stu_password_edit.php'>修改密码</a>
+                        <a class='dropdown-item' href='stuInfo_edit.php'>学生信息修改</a>
+                    </div>
+                </li>
+
+            <li class='nav-item dropdown'>
+                <a class='nav-link' href='class_aty_view.php?class_aty_cur_page=0'>班级活动概览</a>
+            </li>";
+        }
+        ?>
+
+        <?php
+        // * 如果是 管理员用户 创建班级模块
+        if ($user_flag) {
+            echo "
+            <li class='nav-item dropdown'>
+                <a class='nav-link' href='class_create.php'>创建班级</a>
+            </li>";
+        }
+        ?>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">活动服务</a>
             <div class="dropdown-menu">

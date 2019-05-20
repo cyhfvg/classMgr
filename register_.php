@@ -39,8 +39,8 @@ if ($stu_password != $stu_password_) {
     include_once(dirname(__FILE__)."/util/util_mysqli.php");
 
     $conn = getMysqlConnection();
-    $sql = "insert into tb_stu(stu_id,stu_email,stu_phone,stu_name,stu_sex,stu_age,stu_password,stu_job,stu_address)
-    values ('$stu_id','$stu_email', '$stu_phone','$stu_name','$stu_sex',$stu_age,'$stu_password','$stu_job','$stu_address');";
+    $sql = "insert into tb_stu(stu_id,stu_email,stu_phone,stu_name,stu_sex,stu_age,stu_password,stu_job,stu_address,class_id)
+    values ('$stu_id','$stu_email', '$stu_phone','$stu_name','$stu_sex',$stu_age,'$stu_password','$stu_job','$stu_address','$class_id');";
 
     $result = insert_sql($conn,$sql);
     echo $result;

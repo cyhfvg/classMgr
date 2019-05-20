@@ -12,7 +12,7 @@ $conn = getMysqlConnection();
 $sql = "insert into tb_aty (class_id,aty_des,aty_address,aty_date)
 values('$class_id','$aty_des','$aty_address','$aty_date');"; 
 $result = query_sql($conn, $sql);
-$url = get_pre_url().'/class_aty_view.php';
+$url = get_pre_url().'/aty_create.php';
 $get_data = array(
     "class_aty_cur_page"=>"0"
 );
